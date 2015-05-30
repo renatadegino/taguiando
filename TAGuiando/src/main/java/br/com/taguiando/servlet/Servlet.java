@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.taguiando.entitys.Aluno;
 import br.com.taguiando.DAO.*;
 
-@WebServlet("/usucontroller.do")
+@WebServlet("/cadastroaluno")
 public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
