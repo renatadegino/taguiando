@@ -11,10 +11,10 @@ import br.com.taguiando.DAO.ConexaoMySQL;
 import br.com.taguiando.entitys.Aluno;
 
 public class AlunoDAO {
-	private Connection con = ConexaoMySQL.getConnection();
+	private static Connection con = ConexaoMySQL.getConnection();
 	
 	public void Enviar (Aluno form){
-		String sql = "INSERT INTO CONTATO (nome, email, matricula, senha) values (?,?,?,?)";
+		String sql = "INSERT INTO ALUNO (nome, email, matricula, senha) values (?,?,?,?)";
 		try {
 			PreparedStatement preparador = con.prepareStatement(sql);
 			preparador.setString(1, form.getNome());
@@ -30,7 +30,7 @@ public class AlunoDAO {
 	}
 	
 	public List<Aluno> BuscarTodos(){
-		String sql = "SELECT *FROM CONTATO";
+		String sql = "SELECT *FROM ALUNO";
 		List<Aluno> lista = new ArrayList<Aluno>();
 		try {
 			PreparedStatement preparador = con.prepareStatement(sql);
@@ -47,5 +47,11 @@ public class AlunoDAO {
 			e.printStackTrace();
 		}
 		return lista;
+	}
+
+	public void adiciona(Aluno aluno) {
+		// TODO Auto-generated method stub
+		
+		
 	}
 }
