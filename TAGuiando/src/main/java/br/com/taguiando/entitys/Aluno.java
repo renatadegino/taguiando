@@ -2,14 +2,16 @@ package br.com.taguiando.entitys;
 
 public class Aluno {
 	
-	public int matricula;
+	public String matricula;
 	public String nome;
 	public String senha;
 	public String email;
-	public int getMatricula() {
+	
+	
+	public String getMatricula() {
 		return matricula;
 	}
-	public void setMatricula(int matricula) {
+	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
 	public String getNome() {
