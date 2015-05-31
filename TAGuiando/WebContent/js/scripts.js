@@ -51,3 +51,16 @@ function desfixamenu(){
 	document.getElementById('4').setAttribute('style', 'color:#000');
 }
 
+function validarLogin(){
+	if(document.formLogin.txtUsuario.value==""){
+		alert("Campo Usuário Não Informado");  
+		return false;
+	} 
+	if(document.formLogin.txtSenha.value==""){ 
+		alert("Campo Senha Não Informado");
+		return false;
+	} 
+	
+	document.formLogin.submit();
+  }
+
