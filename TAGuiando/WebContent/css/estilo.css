@@ -159,6 +159,11 @@ section{
 	position: relative;
 }
 
+#login {
+	background-color: #0ff;
+	position: relative;
+}
+
 #ancoraabout{
 	height: 10px;
 }

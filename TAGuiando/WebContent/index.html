@@ -1,6 +1,20 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
+		<script type="text/javascript">
+		  function validarLogin(){
+			if(document.formLogin.txtUsuario.value==""){
+				alert("Campo Usuário Não Informado");  
+				return false;
+			} 
+			if(document.formLogin.txtSenha.value==""){ 
+				alert("Campo Senha Não Informado");
+				return false;
+			} 
+			
+			document.formLogin.submit();
+		  }
+		</script>
 	<meta charset="UTF-8">
 	<title>TAGuiando : Te guiando através de TAGs!</title>
 
@@ -23,6 +37,7 @@
 					<a onclick="menufixoabout(); $('#ancoraabout').animatescroll(); "><li>SOBRE O <b>TAGuiando</b></li></a>
 					<a onclick="$('#contato').animatescroll(); menufixocontato();"><li> FALE CONOSCO</li></a>
 					<a onclick="$('#cadastro').animatescroll(); menufixocadastro();"><li> CADASTRE-SE</li></a>
+					<a onclick="$('#login').animatescroll(); menufixologin();"><li> LOGIN</li></a>
 					<!-- SO DEVE APARECER QUANDO LOGADO (DIFINIR QUAIS)-->
 					<!--<li><a href="#news">Outra coisa</a></li>-->
 					<!--<li><a href="#news">Avalie um professor</a></li>-->
@@ -53,6 +68,7 @@
 					<a id="2" onclick="$('#ancoraabout').animatescroll(); menufixoabout();"><li>SOBRE O TAGuiando</li></a>
 					<a id="3" onclick="$('#contato').animatescroll(); menufixocontato();"><li> FALE CONOSCO</li></a>
 					<a id="4" onclick="$('#cadastro').animatescroll(); menufixocadastro();"><li> CADASTRE-SE</li></a>
+					<a id="5" onclick="$('#login').animatescroll(); menufixologin();"><li> LOGIN</li></a>
 					<!-- SO DEVE APARECER QUANDO LOGADO (DIFINIR QUAIS)-->
 					<!--<li><a href="#news">Outra coisa</a></li>-->
 					<!--<li><a href="#news">Avalie um professor</a></li>-->
@@ -90,6 +106,24 @@
 
 
 			</div>
+		</section>
+		<section id="login">
+			<div class="conteudo">
+				<form name="formLogin" action="logado.jsp" method="post">
+				    <p align="center">
+				    <h1>Login na plataforma TAGuiando</h1>
+				      <table>
+				          <tr><td>Usuário:</td><td><input type="text" name="txtUsuario"/></td></tr>
+				          <tr><td>Senha:</td><td><input type="password" name="txtSenha"/></td></tr>
+				          <tr><td colspan="2" align="center"><input type="button" value="Entrar" onclick="validarLogin()"/></td></tr>
+				      </table>
+				      
+				    </p>
+				  </form>
+			
+			
+			</div>
+		
 		</section>
 
 		<a onclick=" $('#ancoraabout').animatescroll(); "><div id="irtopo"><img width="32" height="40" src="images/up.png" alt="ir para o topo"></div></a>
