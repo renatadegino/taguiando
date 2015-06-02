@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>TAGuiando : Te guiando através de TAGs!</title>
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/animatescroll.min.js"></script>
+
+</head>
+
+<body >
+
+	<header class="fade-in two">
+		<div id="right"> <img src="images/logobrincadeira.png" alt="logo de brincadeira"></div>
+
+		<div id="left"> 
+
+			<nav>
+				<ul>
+					<a onclick="menufixoabout(); $('#ancoraabout').animatescroll(); "><li>SOBRE O <b>TAGuiando</b></li></a>
+					<a onclick="$('#contato').animatescroll(); menufixocontato();"><li> FALE CONOSCO</li></a>
+					<a onclick="$('#cadastro').animatescroll(); menufixocadastro();"><li> CADASTRE-SE</li></a>
+					<!-- SO DEVE APARECER QUANDO LOGADO (DIFINIR QUAIS)-->
+					<!--<li><a href="#news">Outra coisa</a></li>-->
+					<!--<li><a href="#news">Avalie um professor</a></li>-->
+				</ul>
+			</nav>
+
+			<div id="facebook"> 
+				<a href="face" target="blank">
+					<img src="images/1-facebook.png" alt="Estamos no Facebook!"/><div id="infofb">Estamos no Facebook!</div>
+				</a>
+			</div><br>
+			<div id="twitter"> 
+				<a href="www.twitter.com" target="blank">
+					<img src="images/1-twitter.png" alt="Siga-nos no Twitter!" />
+						<div id="infotw"> Siga-nos no Twitter!</div>
+				</a>
+			</div>
+
+		</div>
+	</header>
+	
+	<div id="conteudogeral" class="fade-in one">
+		
+		<div class="navegacao">
+			<nav>
+				<ul>
+					<a id="1" onclick="desfixamenu(); $('header').animatescroll(); "><li>HOME</li></a>
+					<a id="2" onclick="$('#ancoraabout').animatescroll(); menufixoabout();"><li>SOBRE O TAGuiando</li></a>
+					<a id="3" onclick="$('#contato').animatescroll(); menufixocontato();"><li> FALE CONOSCO</li></a>
+					<a id="4" onclick="$('#cadastro').animatescroll(); menufixocadastro();"><li> CADASTRE-SE</li></a>
+					<!-- SO DEVE APARECER QUANDO LOGADO (DIFINIR QUAIS)-->
+					<!--<li><a href="#news">Outra coisa</a></li>-->
+					<!--<li><a href="#news">Avalie um professor</a></li>-->
+				</ul>
+			</nav>
+		</div>
+
+		<div id="ancoraabout"></div>
+		<section id="about">
+			<div class="conteudo">oioipojshofuhf</div>
+		</section>
+
+		<section id="contato">
+			<div class="conteudo">aaaaaaaaaaa</div>
+		</section>
+
+		<section id="cadastro">
+			<div class="conteudo">
+
+				<form action="AlunoServlet" method="post">
+					Nome:
+					<input type="text" name="nome" id="nome">
+					<br>
+					Email:
+					<input type="email" name="email" id="email">
+					<br>
+					Matrícula:
+					<input type="number" name="matricula" id="matricula" >
+					<br>
+					Senha:
+					<input type="text" name="senha" id="senha">
+					<br>
+					<input type="submit" id="enviar" name="submit" value="Enviar">
+				</form>
+
+
+			</div>
+		</section>
+
+		<a onclick=" $('#ancoraabout').animatescroll(); "><div id="irtopo"><img width="32" height="40" src="images/up.png" alt="ir para o topo"></div></a>
+
+	</div><!--fim div conteudo geral-->
+
+</body>
+</html>

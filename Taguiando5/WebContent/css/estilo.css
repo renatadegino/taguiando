@@ -1,0 +1,236 @@
+body{
+	width: 99.4%;
+	height: 100%;
+	background: url('../images/bckg.jpg');
+	position: absolute;
+	overflow-y: hidden;
+}
+/*------------------------------------------------------HEADER---------------------------------------------------------------*/
+header {
+	width: 99.4%;
+	height: 700px;
+	background-color: #f1f1f0;
+	margin-top: -30px;
+	position: relative;
+}
+
+header nav ul {
+	list-style: none;
+	margin-top: 200px;
+
+}
+
+header nav li {
+	margin-left: -40px;
+	text-align: center;
+	border-top: 2px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+	padding: 20px 30px 20px 30px; 
+}
+header nav li:hover{
+	background-color: #e1e3e4;
+}
+
+header nav ul a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #000;
+	cursor: pointer;
+
+}
+header nav ul a:visited {
+	text-decoration: none;
+	font-size: 19px;
+
+}
+
+#right{
+	width: 50%;
+	height: 700px;
+	background-color: #3c948b;
+	float: right;
+}
+#right img{
+	margin: 200px 100px 200px 200px;
+}
+
+#left{
+	width: 50%;
+	height: 700px;
+	background: url('../images/bckg.jpg');
+	float: left;
+}
+
+/*---facebook e twitter---*/
+a{
+	text-decoration: none;
+}
+#facebook, #twitter{
+	display: inline;
+}
+#infofb{
+	display: none;
+	background-color: #3c5b9b;
+	color: #fff;
+	text-align: center;
+	float: left;
+	height: 23px;
+	padding-top: 5px;
+	padding-left: 4px;
+}
+#infotw{
+	display: none;
+	background-color: #2daae1;
+	color: #fff;
+	text-align: center;
+	float: left;
+	height: 23px;
+	padding-top: 5px;
+	padding-left: 4px;
+}
+
+#facebook:hover #infofb, #twitter:hover #infotw{
+	display : block;
+}
+
+/*---------------------------------------------------conteudo GERAL--------------------------------------------------------*/
+#conteudogeral{
+	display: none;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:0.2s;
+	-moz-animation-duration:0.2s;
+	animation-duration:0.2s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.2s;
+-moz-animation-delay: 0.2s;
+animation-delay: 0.2s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.2s;
+-moz-animation-delay: 0.2s;
+animation-delay: 0.2s;
+}
+
+/*------------------------------------------------------------------SECTIONS-----------------------------------------------------*/
+section{
+	width: 80%;
+	height: 700px;
+	float: right;
+}
+
+
+#home {
+	margin-top: 80px;
+	background-color: #f9fff0;
+	position: relative;
+}
+
+#about {
+	background-color: #ffff01;
+	position: relative;
+}
+
+#contato {
+	background-color: #00f;
+	position: relative;
+}
+
+#cadastro {
+	background-color: #0ff;
+	position: relative;
+}
+
+#ancoraabout{
+	height: 10px;
+}
+
+/*---------------navegação dentro das sessões--------------*/
+.navegacao{
+	float: left;
+	background-color: transparent;
+	width: 260px;
+	height: 700px;
+
+}
+.navegacao nav ul {
+	list-style: none;
+	margin-top: 200px;
+
+}
+
+.navegacao nav li {
+	margin-left: -40px;
+	text-align: center;
+	border-top: 2px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+	padding: 20px 30px 20px 30px; 
+}
+.navegacao nav li:hover{
+	background-color: #e1e3e4;
+}
+
+.navegacao nav ul a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #000;
+	cursor: pointer;
+
+}
+.navegacao nav ul a:visited {
+	text-decoration: none;
+	font-size: 19px;
+
+}
+
+/*--conteudo dentro das sessões---*/
+.conteudo{
+	float: right;
+	width: 100%;
+}
+
+/*---------------------------------------------------FOOTER------------------------------------------*/
+/*
+footer {
+
+	position: relative;
+	height: 200px;
+	margin-top: 30px;
+	margin-left: -10px;
+	margin-bottom: 30px;
+	background-color: #000;
+	clear: both;
+}
+*/
+/*----------------------------------------------------ANCORATOPO--------------------------------------------*/
+
+#irtopo{
+	position: fixed;
+	clear: both;
+	height: 30px;
+	width: 30px;
+	background-color: transparent;
+	bottom: 30px;
+  	right: 30px;
+  	cursor: pointer;
+}
+
+
